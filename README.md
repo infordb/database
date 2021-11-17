@@ -13,9 +13,12 @@
 
 
 ## redo / undo
-![image](https://user-images.githubusercontent.com/10610884/142140847-62307cfb-dc12-4d20-ad83-7cada0367050.png)
-
-
+| 구분  | redo          | undo                        |
+|-----|---------------|-----------------------------|
+| 역할  | 재생            | 되돌리기                        |
+| 용도  | 복구            | rollback, 읽기 일관성, flashback |
+| 보호  | 데이터 손실 방지     | 멀티 유저의 읽기 일관성 보호            |
+| 저장소 | redo log file | undo segment                |
 
 
 ## Isolation Levels 
