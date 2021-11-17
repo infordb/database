@@ -10,6 +10,14 @@
 * Durability (지속성, 영구성): 성공한 트랜잭션에 의한 모든 변경은 영구적으로 유지돼야 한다.   
                               장애가 발생해도 데이터 유실이 없어야 한다. (REDO)
 
+
+
+## redo / undo
+![image](https://user-images.githubusercontent.com/10610884/142140847-62307cfb-dc12-4d20-ad83-7cada0367050.png)
+
+
+
+
 ## Isolation Levels 
 * Dirty Read : uncommitted 된 데이터를 읽지 않아야만
 * Non Repeatable Read : select 중에 다른 tx 가수정한 commit 된 데이터를 읽지 않음
