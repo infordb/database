@@ -31,3 +31,6 @@
 2. Read Committed : Dirty Read 만 발생 안함
 3. Repeatable Read : Repeatable Read 까지 발생 안함 (마리아DB는 3level까지 적용해도 Phantom Read 발생 안함
 4. Serializable : select시 락 발생
+
+oracle = READ COMMITTED
+mysql = REPEATABLE READ
