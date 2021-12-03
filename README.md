@@ -32,5 +32,12 @@
 3. Repeatable Read : Repeatable Read 까지 발생 안함 (마리아DB는 3level까지 적용해도 Phantom Read 발생 안함
 4. Serializable : select시 락 발생
 
-oracle = READ COMMITTED
+oracle = READ COMMITTED  
 mysql = REPEATABLE READ
+
+## DB별 고려 사항
+ - 선행 트랜잭션이 읽은 데이터는 트랜잭션이 종료될 때까지 후행 트랜잭션이 갱신하거나 삭제하는 것을 불허함으로써 같은 데이터를 두번 쿼리했을 때 일관성 있는 결과를 리턴
+ - Phantom Read 현상 발생
+ - DB2, SQL Server의 경우 트랜잭션 고립화 수준을 Repeatable Read로 변경하면 읽은 데이터에 걸린 공유 Lock을 커밋할 때까지 유지하는 방식으로 구현
+ - Oracle은 이 레벨을 명시적으로 지원하지 않지만 for update절을 이용해 구현 가능,
+   SQL Server등에서도 for update 절을 사용할 수 있지만 커서를 명시적으로 선언할 때만 사용 가능함
