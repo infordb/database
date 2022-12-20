@@ -32,10 +32,10 @@
 3. Repeatable Read : Repeatable Read 까지 발생 안함 (마리아DB는 3level까지 적용해도 Phantom Read 발생 안함
 4. Serializable : select시 락 발생
 
-<default>
-oracle = READ COMMITTED  
-mysql = REPEATABLE READ
-postgresql = Read Committed is the default isolation level in PostgreSQL.
+default   
+oracle = READ COMMITTED     
+mysql = REPEATABLE READ   
+postgresql = Read Committed is the default isolation level in PostgreSQL.   
 
 ## DB별 고려 사항 (Repeatable Read)
  - 선행 트랜잭션이 읽은 데이터는 트랜잭션이 종료될 때까지 후행 트랜잭션이 갱신하거나 삭제하는 것을 불허함으로써 같은 데이터를 두번 쿼리했을 때 일관성 있는 결과를 리턴
