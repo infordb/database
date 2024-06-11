@@ -1,3 +1,5 @@
+## 개념
+https://loosie.tistory.com/527
 
 ## db별 redo / undo
 
